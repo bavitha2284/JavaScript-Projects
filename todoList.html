@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+<div>
+    <ul>
+        <li>new</li>
+        <li>list</li>
+        <li>remove</li>
+        <li>quit or q</li>
+    </ul>
+    </div>
+    <script>
+        let ne ="new";
+        let li="list";
+        let re="remove";
+        let q="quit";
+        const todo=['cut fruits','cut vegetables'];
+    
+while(true){
+    let mng = prompt("what is ur to do list")
+    if(mng===li){
+        console.log("*********************");
+        for(let i=0;i<todo.length;i++){
+            console.log(`${i} : ${todo[i]} `);
+        }
+        console.log("**********************");
+    }
+    else if(mng==="new"){
+        const newTodo=prompt("Enter ur new Todo");
+        todo.push(newTodo);
+        console.log(`${newTodo} is added`);
+    }
+    else if(mng===re){
+        let inde=parseInt(prompt("enter the index"));
+        let deleted=todo.splice(inde,1);
+        console.log(`it is deleted... ${deleted}`);
+    }
+    else if(mng==="q" && mng===q){
+        console.log("You .... Quit!");
+        break;
+    }
+    
+    
+}
+    </script>
+</body>
+</html>
